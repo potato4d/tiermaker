@@ -23,5 +23,28 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBTeKAnHyN_XBMwhCdXERXtMPkLFFTaJa4",
+        authDomain: "ygo-calculator.firebaseapp.com",
+        projectId: "ygo-calculator",
+        storageBucket: "ygo-calculator.appspot.com",
+        messagingSenderId: "495388319421",
+        appId: "1:495388319421:web:da9a450e6fdfd0e2df21d4",
+        measurementId: "G-XMWCRBFZ1S"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
