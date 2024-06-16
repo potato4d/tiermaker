@@ -9,6 +9,10 @@ const App: React.FC = () => {
       }}><img src="/static/logo.png" alt="Tier Maker" width="225" height="35.5" /></h1>
       <TierList />
 
+      <div className='flex items-center justify-center'>
+        &copy; 2024 <a href="https://x.com/potato4d">@potato4d</a>
+      </div>
+
       <footer className='flex px-4 justify-between items-center py-4 opacity-0' style={{
         width: '816px',
         maxWidth: '100%'
