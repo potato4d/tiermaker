@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "ygo-tier",
+    "site": "tiermaker",
     "public": "dist",
     "ignore": [
       "firebase.json",
