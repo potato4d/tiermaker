@@ -28,24 +28,24 @@ export const SAMPLE_DATA = [
       { name: '＠イグニスター', image: '/static/deckimages/ignister.png' },
       { name: '転生炎獣', image: '/static/deckimages/salamangreat.png' },
       { name: '斬機', image: '/static/deckimages/mathmech.png' },
-      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
-      { name: 'ピュアリィ', image: '/static/deckimages/purrely.png' },
       { name: '破械', image: '/static/deckimages/unchained.png' },
       { name: '烙印', image: '/static/deckimages/branded.png' },
-      { name: '十二獣', image: '/static/deckimages/zoodiac.png' },
-      { name: 'クシャトリラ', image: '/static/deckimages/kashtira.png' },
-      { name: 'ホルス', image: '/static/deckimages/horus.png' },
-      { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
-  // { name: 'セフィラ', image: '/static/deckimages/zefra.png' },
+  { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+  { name: 'ピュアリィ', image: '/static/deckimages/purrely.png' },
+  { name: 'セフィラ', image: '/static/deckimages/zefra.png' },
+  { name: 'クシャトリラ', image: '/static/deckimages/kashtira.png' },
+  { name: '十二獣', image: '/static/deckimages/zoodiac.png' },
+  { name: 'ホルス', image: '/static/deckimages/horus.png' },
+  { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
   // { name: 'キマイラ', image: '/static/deckimages/spright.png' },
 ];

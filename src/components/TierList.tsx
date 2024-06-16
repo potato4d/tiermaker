@@ -7,6 +7,7 @@ import { Tier, Deck } from '../types';
 import { SAMPLE_DATA, INITIAL_AVAILABLE_DECKS } from '../assets/sample';
 import { exportAsImage } from '../utils/exportImage'; // インポートを追加
 import GlobalDropZone from './GlobalDropZone'; // インポートを追加
+import { DownloadIcon } from './Icon';
 
 const TierList: React.FC = () => {
   const [tiers, setTiers] = useState<Tier[]>(SAMPLE_DATA);
@@ -41,7 +42,6 @@ const TierList: React.FC = () => {
     <DndProvider backend={HTML5Backend}>
       <GlobalDropZone moveDeckToAvailableDecks={moveDeckToAvailableDecks}>
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <button onClick={exportAsImage} className="mb-4 p-2 bg-blue-500 text-white rounded">Save as Image</button>
           <div id="tier-list-container" className="tier-list mb-2">
             {tiers.map((tier, tierIndex) => (
               <TierComponent
@@ -55,6 +55,27 @@ const TierList: React.FC = () => {
             ))}
           </div>
           <AvailableDecks decks={availableDecks} />
+        </div>
+        <div className='w-full max-w-[816px]'>
+          <div className='flex pt-4 justify-between'>
+          <button
+                type="button"
+                onClick={exportAsImage}
+                className={"w-[calc(50%-8px)] h-20 text-2xl download-button leading-none py-2 flex items-center justify-center appearance-none transition-all text-white font-bold bg-blue-500 hover:bg-blue-600"}
+              >
+                <DownloadIcon className='w-6 h-6' />
+                <span className="inline-block ml-1">Download</span>
+              </button>
+            {/* <button onClick={exportAsImage} className="w-[calc(50%-8px)] h-20 text-2xl flex items-center justify-center appearance-none bg-blue-500 text-white rounded-sm" type="button">
+              Save as Image
+            </button> */}
+            <div id="share-button" className='w-[calc(50%-8px)] h-20'>
+              <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Tier Maker for Yu-Gi-Oh! MasterDuel')}&url=${encodeURIComponent('https://tiermaker.web.app/')}&hashtags=${encodeURIComponent('遊戯王マスターデュエル,TIERMAKERFORMD')}`} target='_blank' className="relative overflow-hidden w-full h-full text-2xl flex items-center justify-center appearance-none bg-black text-white">
+                Share to X
+              </a>
+            </div>
+          </div>
+        {/* <button onClick={exportAsImage} className="mb-4 p-2 bg-blue-500 text-white rounded">Save as Image</button> */}
         </div>
       </GlobalDropZone>
     </DndProvider>

@@ -8,6 +8,37 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1.0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0.0;
+    transform: translateY(15px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0.0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1.0;
+    transform: translateY(0px);
+  }
+}
+
 #tier-list-container,
 .available-decks-container {
   max-width: 816px;
@@ -40,4 +71,30 @@ html, body {
 
 .export .md\\:pr-32 {
   @apply pr-32;
+}
+
+.download-button:hover svg {
+  animation: slideOut 0.15s ease-out forwards, slideIn 0.15s 0.30s ease-out forwards;
+}
+
+#share-button a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+  transform: skewX(-25deg);
+  z-index: 20;
+}
+
+#share-button:hover a::before {
+  animation: shine 1s forwards;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
 }

@@ -6,7 +6,7 @@ const App: React.FC = () => {
     <div className="container w-full max-w-[880px] mx-auto">
       <h1 className="text-4xl font-bold pt-4 md:pt-8 export-md:pt-8 mb-8 text-center flex items-center justify-center" style={{
         fontFamily: 'Digital Numbers'
-      }}><img src="/static/logo.svg" alt="Tier Maker" width="225" /></h1>
+      }}><img src="/static/logo.png" alt="Tier Maker" width="225" height="35.5" /></h1>
       <TierList />
 
       <footer className='flex px-4 justify-between items-center py-4 opacity-0' style={{
