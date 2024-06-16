@@ -42,7 +42,7 @@ const TierList: React.FC = () => {
       <GlobalDropZone moveDeckToAvailableDecks={moveDeckToAvailableDecks}>
         <div style={{ position: 'relative', zIndex: 1 }}>
           <button onClick={exportAsImage} className="mb-4 p-2 bg-blue-500 text-white rounded">Save as Image</button>
-          <div id="tier-list-container" className="tier-list">
+          <div id="tier-list-container" className="tier-list mb-2">
             {tiers.map((tier, tierIndex) => (
               <TierComponent
                 key={tier.name}

@@ -41,7 +41,3 @@ html, body {
 .export .md\\:pr-32 {
   @apply pr-32;
 }
-
-.available-decks-container::-webkit-scrollbar{
-  display:none;
-}
