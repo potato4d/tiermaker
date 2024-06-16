@@ -12,3 +12,36 @@ html, body {
 .available-decks-container {
   max-width: 816px;
 }
+
+/* export-md クラス */
+.export .md\\:flex-row {
+  @apply flex-row;
+}
+
+.export .md\\:w-24 {
+  @apply w-24;
+}
+
+.export .md\\:h-12 {
+  @apply h-12;
+}
+
+.export .md\\:flex-wrap {
+  @apply flex-wrap;
+}
+
+.export .md\\:p-8 {
+  @apply p-8;
+}
+
+.export .md\\:pt-0 {
+  @apply pt-0;
+}
+
+.export .md\\:pr-32 {
+  @apply pr-32;
+}
+
+.available-decks-container::-webkit-scrollbar{
+  display:none;
+}

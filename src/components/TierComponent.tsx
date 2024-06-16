@@ -28,8 +28,8 @@ const TierComponent: React.FC<TierComponentProps> = ({ tier, tierIndex, moveDeck
   });
 
   return (
-    <div className="flex tier w-full" data-tier-index={tierIndex} ref={tierDrop} style={{ minHeight: '100px' }}>
-      <div className={`tier-label ${tierColors[tierIndex]} text-white font-bold m-2 w-24 text-bold h-12 flex items-center justify-center`}>
+    <div className="flex export-md:flex-row md:flex-row flex-col tier w-full " data-tier-index={tierIndex} ref={tierDrop} style={{ minHeight: '100px' }}>
+      <div className={`tier-label ${tierColors[tierIndex]} text-white font-bold m-2 text-bold w-[100%-8px] md:w-24 export-md:w-24 h-8 md:h-12 export-md:h-12 flex items-center justify-center`}>
         {tier.name}
       </div>
       <div className="flex flex-wrap w-full">
@@ -44,8 +44,10 @@ const TierComponent: React.FC<TierComponentProps> = ({ tier, tierIndex, moveDeck
           />
         ))}
         {tier.decks.length === 0 && (
-          <div className="mt-2 empty-placeholder w-full h-24 flex items-center justify-center text-gray-500 border border-dashed border-gray-300">
-            ドラッグしてここにデッキを追加
+          <div className='p-2 w-full'>
+            <div className="empty-placeholder w-full h-[calc(6rem-4px)] flex items-center justify-center text-gray-500 border border-dashed border-gray-300">
+              ドラッグしてここにデッキを追加
+            </div>
           </div>
         )}
       </div>
