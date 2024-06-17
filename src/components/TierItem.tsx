@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import { Deck } from '../types';
+import { useDragContext } from '../context/DragContext'; // コンテキストのインポート
 
 interface TierItemProps {
   deck: Deck;
@@ -11,6 +12,8 @@ interface TierItemProps {
 }
 
 const TierItem: React.FC<TierItemProps> = ({ deck, index, tierIndex, moveDeck, moveDeckToAvailableDecks }) => {
+  const { isDragging } = useDragContext(); // ドラッグの状態を取得
+
   const ref = React.useRef<HTMLDivElement>(null);
   const [, drop] = useDrop({
     accept: 'deck',
@@ -33,24 +36,24 @@ const TierItem: React.FC<TierItemProps> = ({ deck, index, tierIndex, moveDeck, m
     },
   });
 
-  const [{ isDragging }, drag] = useDrag({
+  const [{ isDraggingItem }, drag] = useDrag({
     type: 'deck',
     item: { deck, index, tierIndex },
+    collect: (monitor) => ({
+      isDraggingItem: monitor.isDragging(),
+    }),
     end: (item, monitor) => {
       const didDrop = monitor.didDrop();
       if (!didDrop && item.tierIndex === tierIndex) {
         moveDeckToAvailableDecks(item.deck, tierIndex);
       }
     },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
   });
 
   drag(drop(ref));
 
   return (
-    <div ref={ref} className={`tier-item m-2 ${isDragging ? 'opacity-50 border-blue-500' : ''} cursor-grab relative border border-gray-700`}>
+    <div ref={ref} className={`tier-item m-2 ${isDraggingItem ? 'opacity-50 border-blue-500' : ''} cursor-grab relative border border-gray-700`} style={{ pointerEvents: isDragging ? 'none' : 'auto' }}>
       <img src={deck.image} alt={deck.name} className="w-[160px] h-[90px] object-cover rounded-sm overflow-hidden" />
       <span className='block text-center w-full absolute left-0 bottom-0 p-1 text-sm font-bold text-white bg-[#000000cc]'>{deck.name}</span>
     </div>

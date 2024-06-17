@@ -1,6 +1,7 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { useDrag } from 'react-dnd';
 import { Deck } from '../types';
+import { useDragContext } from '../context/DragContext'; // コンテキストのインポート
 
 interface AvailableDecksProps {
   decks: Deck[];
@@ -26,12 +27,12 @@ const AvailableDecks: React.FC<AvailableDecksProps> = ({ decks }) => {
           </div>
         )}
         {decks.length === 0 && (
-            <div className='p-2 w-full'>
-              <div className="empty-placeholder rounded-sm w-full h-24 flex items-center justify-center text-gray-300 border border-dashed border-gray-300">
-                ドラッグしてここにデッキを追加
-              </div>
+          <div className='p-2 w-full'>
+            <div className="empty-placeholder rounded-sm w-full h-24 flex items-center justify-center text-gray-300 border border-dashed border-gray-300">
+              ドラッグしてここにデッキを追加
             </div>
-          )}
+          </div>
+        )}
       </div>
       <div className='w-full p-4 bg-gray-700 text-white'>
         <input type="text" className='w-full rounded overflow-hidden p-2 text-black' placeholder='Input theme name here...' onInput={handleInputThemeName} />
@@ -41,6 +42,8 @@ const AvailableDecks: React.FC<AvailableDecksProps> = ({ decks }) => {
 };
 
 const AvailableDeckItem: React.FC<{ deck: Deck }> = ({ deck }) => {
+  const { setDragging } = useDragContext();
+
   const [{ isDragging }, drag] = useDrag({
     type: 'deck',
     item: { deck, index: -1, tierIndex: -1 }, // indexとtierIndexはTier内ではないことを示すために-1を使用
@@ -48,6 +51,10 @@ const AvailableDeckItem: React.FC<{ deck: Deck }> = ({ deck }) => {
       isDragging: monitor.isDragging(),
     }),
   });
+
+  useEffect(() => {
+    setDragging(isDragging);
+  }, [isDragging, setDragging]);
 
   return (
     <div ref={drag} className={`inline-block ${isDragging ? 'opacity-50' : ''} relative border border-gray-700`}>
