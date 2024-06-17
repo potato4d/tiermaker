@@ -50,5 +50,8 @@ export const INITIAL_AVAILABLE_DECKS: Deck[] = [
   { name: '十二獣', image: '/static/deckimages/zoodiac.png' },
   { name: 'ホルス', image: '/static/deckimages/horus.png' },
   { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
+
+  { name: 'その他1', image: '/static/deckimages/others_01.png' },
+  { name: 'その他2', image: '/static/deckimages/others_02.png' },
   // { name: 'キマイラ', image: '/static/deckimages/spright.png' },
 ];

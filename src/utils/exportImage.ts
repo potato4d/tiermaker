@@ -1,5 +1,30 @@
 import domToImage from 'dom-to-image';
 
+const cloneAndLoadImages = (element: HTMLElement): Promise<void[]> => {
+  const images = Array.from(element.getElementsByTagName('img'));
+  const clonedImages = images.map((img) => {
+    const clonedImg = new Image();
+    clonedImg.src = img.src;
+    clonedImg.width = img.width;
+    clonedImg.height = img.height;
+    img.replaceWith(clonedImg);
+    return clonedImg;
+  });
+
+  const imagePromises = clonedImages.map((img) => {
+    return new Promise<void>((resolve, reject) => {
+      if (img.complete) {
+        resolve();
+      } else {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error('Image load error'));
+      }
+    });
+  });
+
+  return Promise.all(imagePromises);
+};
+
 export const exportAsImage = () => {
   const element = document.getElementById('tier-list-container');
   const titleElement = document.querySelector('h1'); // <h1>要素を取得
@@ -18,8 +43,8 @@ export const exportAsImage = () => {
     clonedTitle.style.background = '#000';
     clonedFooter.style.opacity = '1.0';
     clonedElement.insertBefore(clonedTitle, clonedElement.firstChild); // <h1>要素を追加
-    clonedElement.insertBefore(clonedFooter, clonedElement.nextSibling); // <footer>要素を追加
-    clonedElement.insertBefore(style, clonedElement.nextSibling); // スタイルを追加
+    clonedElement.appendChild(clonedFooter); // <footer>要素を追加
+    clonedElement.appendChild(style); // スタイルを追加
 
     clonedElement.style.width = '640px';
     clonedElement.style.position = 'absolute';
@@ -30,7 +55,8 @@ export const exportAsImage = () => {
     clonedElement.classList.add('export');
     document.body.appendChild(clonedElement);
 
-    domToImage.toPng(clonedElement)
+    cloneAndLoadImages(clonedElement)
+      .then(() => domToImage.toPng(clonedElement))
       .then((dataUrl) => {
         const link = document.createElement('a');
         link.href = dataUrl;
