@@ -10,7 +10,7 @@ const App: React.FC = () => {
       <TierList />
 
       <div className='flex items-center justify-center'>
-        &copy; 2024 <a href="https://x.com/potato4d">@potato4d</a>
+        &copy; 2024&nbsp;<a href="https://x.com/potato4d">@potato4d</a>
       </div>
 
       <footer className='flex px-4 justify-between items-center py-4 opacity-0' style={{
