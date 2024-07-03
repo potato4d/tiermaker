@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useDrop } from 'react-dnd';
 import { Deck } from '../types';
 
-interface GlobalDropZoneProps {
+type GlobalDropZoneProps = {
   moveDeckToAvailableDecks: (deck: Deck, sourceTierIndex: number) => void;
   children: React.ReactNode;
 }

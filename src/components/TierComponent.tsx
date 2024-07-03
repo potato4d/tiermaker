@@ -3,7 +3,7 @@ import { useDrop } from 'react-dnd';
 import TierItem from './TierItem';
 import { Tier, Deck } from '../types';
 
-interface TierComponentProps {
+type TierComponentProps = {
   tier: Tier;
   tierIndex: number;
   moveDeck: (dragIndex: number, hoverIndex: number, dragTierIndex: number, hoverTierIndex: number) => void;

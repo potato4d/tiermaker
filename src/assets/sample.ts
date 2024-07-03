@@ -6,32 +6,34 @@ export const SAMPLE_DATA = [
     decks: [
       { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
       { name: '炎王', image: '/static/deckimages/fireking.jpg' },
-      { name: 'スネークアイ', image: '/static/deckimages/snake-eye.png' },
       { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
-      { name: 'スプライト', image: '/static/deckimages/spright.png' },
+      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
     ],
   },
   {
     name: 'Tier3',
     decks: [
+      { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
       { name: '60GS', image: '/static/deckimages/60gs.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
-      { name: '破械', image: '/static/deckimages/unchained.png' },
+      { name: 'スプライト', image: '/static/deckimages/spright.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
-  { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
+  { name: 'ユベル', image: '/static/deckimages/yubel.png' },
+  { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
+
   { name: '超重武者', image: '/static/deckimages/superheavy_samurai.png' },
   { name: 'エクソシスター', image: '/static/deckimages/exosister.png' },
   { name: 'ゴストリピュアリィ', image: '/static/deckimages/ghostrick-purrely.png' },
@@ -49,7 +51,8 @@ export const INITIAL_AVAILABLE_DECKS: Deck[] = [
   { name: 'クシャトリラ', image: '/static/deckimages/kashtira.png' },
   { name: '十二獣', image: '/static/deckimages/zoodiac.png' },
   { name: 'ホルス', image: '/static/deckimages/horus.png' },
-  { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
+
+  { name: 'エンディミオン', image: '/static/deckimages/endymion.png' },
 
   { name: 'その他1', image: '/static/deckimages/others_01.png' },
   { name: 'その他2', image: '/static/deckimages/others_02.png' },

@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-interface DragContextProps {
+type DragContextProps = {
   isDragging: boolean;
   setDragging: (dragging: boolean) => void;
 }

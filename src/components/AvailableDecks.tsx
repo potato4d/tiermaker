@@ -3,7 +3,7 @@ import { useDrag } from 'react-dnd';
 import { Deck } from '../types';
 import { useDragContext } from '../context/DragContext'; // コンテキストのインポート
 
-interface AvailableDecksProps {
+type AvailableDecksProps = {
   decks: Deck[];
 }
 

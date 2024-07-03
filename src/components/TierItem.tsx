@@ -3,7 +3,7 @@ import { useDrag, useDrop } from 'react-dnd';
 import { Deck } from '../types';
 import { useDragContext } from '../context/DragContext'; // コンテキストのインポート
 
-interface TierItemProps {
+type TierItemProps = {
   deck: Deck;
   index: number;
   tierIndex: number;
