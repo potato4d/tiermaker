@@ -79,7 +79,10 @@ const TierList: React.FC = () => {
             <span className='block mb-2'>更新履歴</span>
             <details>
               <ul>
-                <li>2024/06/17: v0.1.0 を公開しました。</li>
+              <li>2024/08/15: 神碑を追加しました。</li>
+              <li>2024/08/05: 粛声を追加しました。</li>
+              <li>2024/07/03: センチュリオン/ユベル/エンディミオンを追加しました。</li>
+              <li>2024/06/17: v0.1.0 を公開しました。</li>
               </ul>
             </details>
           </summary>
