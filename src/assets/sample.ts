@@ -33,6 +33,8 @@ export const SAMPLE_DATA = [
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: '神碑', image: '/static/deckimages/runick.png' },
+
   { name: '60GS', image: '/static/deckimages/60gs.png' },
   { name: '炎王', image: '/static/deckimages/fireking.jpg' },
 
