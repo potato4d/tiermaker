@@ -36,7 +36,7 @@ const TierList: React.FC = () => {
     const newTiers = [...tiers];
     newTiers[sourceTierIndex].decks = newTiers[sourceTierIndex].decks.filter(d => d.name !== deck.name);
     setTiers(newTiers);
-    setAvailableDecks(prevAvailableDecks => [...prevAvailableDecks, deck]);
+    setAvailableDecks(prevAvailableDecks => [deck, ...prevAvailableDecks]);
   }, [tiers]);
 
   return (
@@ -59,7 +59,7 @@ const TierList: React.FC = () => {
             <AvailableDecks decks={availableDecks} />
           </div>
           <div className='w-full max-w-[816px]'>
-            <div className='flex pt-4 justify-between'>
+            <div className='flex pt-4 justify-center items-center'>
               <button
                 type="button"
                 onClick={exportAsImage}
