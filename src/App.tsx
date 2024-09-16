@@ -7,7 +7,21 @@ const App: React.FC = () => {
       <h1 className="text-4xl font-bold pt-4 md:pt-8 export-md:pt-8 mb-8 text-center flex items-center justify-center" style={{
         fontFamily: 'Digital Numbers'
       }}><img src="/static/logo.png" alt="Tier Maker" width="225" height="35.5" /></h1>
+
       <TierList />
+
+      <summary className='text-white mt-4 text-sm ml-4'>
+        <span className='block mb-2'>更新履歴</span>
+        <details>
+          <ul>
+          <li>2024/09/16: 【古代の機械】を追加しました。</li>
+          <li>2024/08/15: 【神碑】を追加しました。</li>
+          <li>2024/08/05: 【粛声】を追加しました。</li>
+          <li>2024/07/03: センチュリオン/ユベル/エンディミオンを追加しました。</li>
+          <li>2024/06/17: v0.1.0 を公開しました。</li>
+          </ul>
+        </details>
+      </summary>
 
       <div className='flex items-center justify-center'>
         &copy; 2024&nbsp;<a href="https://x.com/potato4d">@potato4d</a>
