@@ -1,4 +1,4 @@
-import { Deck } from "../types";
+import { Deck } from "./types";
 
 export const SAMPLE_DATA = [
   {
@@ -32,6 +32,7 @@ export const SAMPLE_DATA = [
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'ヴァリアンツ', image: '/static/deckimages/vaylantz.png' },
   { name: 'スプライト', image: '/static/deckimages/spright.png' },
   { name: '古代の機械', image: '/static/deckimages/ancient-gear.png' },
   { name: '神碑', image: '/static/deckimages/runick.png' },

@@ -4,7 +4,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import TierComponent from './TierComponent';
 import AvailableDecks from './AvailableDecks';
 import { Tier, Deck } from '../types';
-import { SAMPLE_DATA, INITIAL_AVAILABLE_DECKS } from '../assets/masterdata';
+import { SAMPLE_DATA, INITIAL_AVAILABLE_DECKS } from '../masterdata';
 import { exportAsImage } from '../utils/exportImage'; // インポートを追加
 import GlobalDropZone from './GlobalDropZone'; // インポートを追加
 import { DownloadIcon } from './Icon';
@@ -63,10 +63,10 @@ const TierList: React.FC = () => {
               <button
                 type="button"
                 onClick={exportAsImage}
-                className={"w-[calc(50%-8px)] h-20 text-2xl download-button leading-none py-2 flex items-center justify-center appearance-none transition-all text-blue-500 font-bold border-2 border-blue-500 hover:border-bg-blue-600 bg-transparent hover:bg-blue-500 hover:bg-opacity-20"}
+                className={"w-[calc(50%-8px)] h-20 text-xl download-button leading-none py-2 flex items-center justify-center appearance-none transition-all text-blue-500 font-bold border-2 border-blue-500 hover:border-bg-blue-600 bg-transparent hover:bg-blue-500 hover:bg-opacity-20"}
               >
                 <DownloadIcon className='w-6 h-6' />
-                <span className="inline-block ml-1">Download</span>
+                <span className="inline-block ml-2">画像として書き出す</span>
               </button>
               {/* <div id="share-button" className='w-[calc(50%-8px)] h-20'>
                 <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('マスターデュエルのTier表を作ったよ！')}&url=${encodeURIComponent('https://tier.ygotools.com/')}&hashtags=${encodeURIComponent('遊戯王マスターデュエル,TIERMAKERFORMD')}`} target='_blank' className="relative overflow-hidden w-full h-full text-2xl flex items-center justify-center appearance-none border-2 border-white text-white">

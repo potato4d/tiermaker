@@ -35,7 +35,7 @@ const AvailableDecks: React.FC<AvailableDecksProps> = ({ decks }) => {
         )}
       </div>
       <div className='w-full p-4 bg-gray-700 text-white'>
-        <input type="text" className='w-full rounded overflow-hidden p-2 text-black' placeholder='Input theme name here...' onInput={handleInputThemeName} />
+        <input type="text" className='w-full rounded overflow-hidden p-2 text-black' placeholder='テーマ名で絞り込む' onInput={handleInputThemeName} />
       </div>
     </div>
   );
