@@ -4,7 +4,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import TierComponent from './TierComponent';
 import AvailableDecks from './AvailableDecks';
 import { Tier, Deck } from '../types';
-import { SAMPLE_DATA, INITIAL_AVAILABLE_DECKS } from '../assets/sample';
+import { SAMPLE_DATA, INITIAL_AVAILABLE_DECKS } from '../assets/masterdata';
 import { exportAsImage } from '../utils/exportImage'; // インポートを追加
 import GlobalDropZone from './GlobalDropZone'; // インポートを追加
 import { DownloadIcon } from './Icon';

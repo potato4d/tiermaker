@@ -4,16 +4,15 @@ export const SAMPLE_DATA = [
   {
     name: 'Tier1',
     decks: [
-      { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
       { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
+      { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
       { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
       { name: 'ユベル', image: '/static/deckimages/yubel.png' },
-      { name: '烙印', image: '/static/deckimages/branded.png' },
     ],
   },
   {
@@ -21,7 +20,7 @@ export const SAMPLE_DATA = [
     decks: [
       { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
       { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
-      { name: 'スプライト', image: '/static/deckimages/spright.png' },
+      { name: '烙印', image: '/static/deckimages/branded.png' },
     ],
   },
   {
@@ -33,6 +32,8 @@ export const SAMPLE_DATA = [
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'スプライト', image: '/static/deckimages/spright.png' },
+  { name: '古代の機械', image: '/static/deckimages/ancient-gear.png' },
   { name: '神碑', image: '/static/deckimages/runick.png' },
 
   { name: '60GS', image: '/static/deckimages/60gs.png' },
