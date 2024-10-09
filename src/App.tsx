@@ -23,8 +23,10 @@ const App: React.FC = () => {
         </details>
       </summary>
 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScn8SCvjob9GXjtwctK6JDdIpdIg2pzX-pMDdNryTBQDsXfhw/viewform?usp=sf_link" target='_blank' className='text-sm underline my-4 inline-block'>テーマ追加希望はこちら</a>
+
       <div className='flex items-center justify-center'>
-        &copy; 2024&nbsp;<a href="https://x.com/potato4d">@potato4d</a>
+        &copy; 2024&nbsp;<a href="https://x.com/potato4d" className='underline'>@potato4d</a>
       </div>
 
       <footer className='flex px-4 justify-between items-center py-4 opacity-0' style={{

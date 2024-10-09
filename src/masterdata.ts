@@ -4,34 +4,36 @@ export const SAMPLE_DATA = [
   {
     name: 'Tier1',
     decks: [
+      { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
       { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
+      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
-      { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
       { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
-      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
     ],
   },
   {
     name: 'Tier3',
     decks: [
-      { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
-      { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
-      { name: '烙印', image: '/static/deckimages/branded.png' },
+      { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
+      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
-      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
+      { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
+      { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'インフェルノイド', image: '/static/deckimages/infernoid.png' },
+  { name: '烙印', image: '/static/deckimages/branded.png' },
   { name: 'ヴァリアンツ', image: '/static/deckimages/vaylantz.png' },
   { name: 'スプライト', image: '/static/deckimages/spright.png' },
   { name: '古代の機械', image: '/static/deckimages/ancient-gear.png' },
