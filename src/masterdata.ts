@@ -5,33 +5,36 @@ export const SAMPLE_DATA = [
     name: 'Tier1',
     decks: [
       { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
-      { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
-      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
-      { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
+      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+      { name: 'ライトロード', image: '/static/deckimages/lightsworn.png' },
+      { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
     ],
   },
   {
     name: 'Tier3',
     decks: [
+      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
       { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
-      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
-      { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
-      { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
+      { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
+      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
+      { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
+  { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
   { name: 'インフェルノイド', image: '/static/deckimages/infernoid.png' },
   { name: '烙印', image: '/static/deckimages/branded.png' },
   { name: 'ヴァリアンツ', image: '/static/deckimages/vaylantz.png' },
@@ -51,7 +54,6 @@ export const INITIAL_AVAILABLE_DECKS: Deck[] = [
   { name: '転生炎獣', image: '/static/deckimages/salamangreat.png' },
   { name: '斬機', image: '/static/deckimages/mathmech.png' },
 
-  { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
   { name: 'ピュアリィ', image: '/static/deckimages/purrely.png' },
   { name: 'セフィラ', image: '/static/deckimages/zefra.png' },
   { name: 'クシャトリラ', image: '/static/deckimages/kashtira.png' },
