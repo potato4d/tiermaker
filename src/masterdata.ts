@@ -5,35 +5,38 @@ export const SAMPLE_DATA = [
     name: 'Tier1',
     decks: [
       { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
+      { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
-      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
-      { name: 'ライトロード', image: '/static/deckimages/lightsworn.png' },
+      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
       { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
     ],
   },
   {
     name: 'Tier3',
     decks: [
-      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
-      { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
+      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
+      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
-      { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
-      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
-      { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
-  { name: 'メタビート', image: '/static/deckimages/metabeat.png' },
+  { name: 'マナドゥム', image: '/static/deckimages/mannadium.png' },
+  { name: 'キマイラ', image: '/static/deckimages/chimera.png' },
+  { name: '覇王幻奏', image: '/static/deckimages/supreme-melodious.png' },
+  { name: '暗黒界', image: '/static/deckimages/darkworld.png' },
+  { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
+  { name: 'ライトロード', image: '/static/deckimages/lightsworn.png' },
+  { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
   { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
   { name: 'インフェルノイド', image: '/static/deckimages/infernoid.png' },
   { name: '烙印', image: '/static/deckimages/branded.png' },
