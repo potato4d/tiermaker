@@ -6,6 +6,7 @@ export const SAMPLE_DATA = [
     decks: [
       { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
       { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
+      { name: '竜剣士', image: '/static/deckimages/dracoslayer.png' },
     ],
   },
   {
