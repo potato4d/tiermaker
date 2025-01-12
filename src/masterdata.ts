@@ -6,14 +6,14 @@ export const SAMPLE_DATA = [
     decks: [
       { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
       { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
-      { name: '竜剣士', image: '/static/deckimages/dracoslayer.png' },
+      { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
       { name: 'ユベル', image: '/static/deckimages/yubel.png' },
-      { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
+      { name: '竜剣士', image: '/static/deckimages/dracoslayer.png' },
     ],
   },
   {
@@ -21,6 +21,7 @@ export const SAMPLE_DATA = [
     decks: [
       { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
       { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+      { name: 'ドライトロン', image: '/static/deckimages/drytron.png' },
     ],
   },
   {
@@ -31,6 +32,8 @@ export const SAMPLE_DATA = [
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'ギミック・パペット', image: '/static/deckimages/gimmick-puppet.png' },
+  { name: '白き森', image: '/static/deckimages/white-forest.png' },
   { name: 'マナドゥム', image: '/static/deckimages/mannadium.png' },
   { name: 'キマイラ', image: '/static/deckimages/chimera.png' },
   { name: '覇王幻奏', image: '/static/deckimages/supreme-melodious.png' },
