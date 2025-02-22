@@ -5,33 +5,37 @@ export const SAMPLE_DATA = [
     name: 'Tier1',
     decks: [
       { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
-      { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
-      { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
-      { name: 'ユベル', image: '/static/deckimages/yubel.png' },
-      { name: '竜剣士', image: '/static/deckimages/dracoslayer.png' },
+      { name: '白き森', image: '/static/deckimages/white-forest.png' },
+      { name: 'スネークアイ', image: '/static/deckimages/snake-eye.png' },
     ],
   },
   {
     name: 'Tier3',
     decks: [
-      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
-      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
-      { name: 'ドライトロン', image: '/static/deckimages/drytron.png' },
+      { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
+      { name: '千年', image: '/static/deckimages/exodia.png' },
+      { name: '粛声', image: '/static/deckimages/voiceless_voice.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
+      { name: 'ティアラメンツ', image: '/static/deckimages/tearlaments.png' },
+      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+      { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'ユベル', image: '/static/deckimages/yubel.png' },
+  { name: 'ドライトロン', image: '/static/deckimages/drytron.png' },
+  { name: '竜剣士', image: '/static/deckimages/dracoslayer.png' },
   { name: 'ギミック・パペット', image: '/static/deckimages/gimmick-puppet.png' },
   { name: '白き森', image: '/static/deckimages/white-forest.png' },
   { name: 'マナドゥム', image: '/static/deckimages/mannadium.png' },
@@ -40,7 +44,6 @@ export const INITIAL_AVAILABLE_DECKS: Deck[] = [
   { name: '暗黒界', image: '/static/deckimages/darkworld.png' },
   { name: '炎王スネークアイ', image: '/static/deckimages/fireking-snake-eye.png' },
   { name: 'ライトロード', image: '/static/deckimages/lightsworn.png' },
-  { name: 'R-ACE', image: '/static/deckimages/r-ace.png' },
   { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
   { name: 'インフェルノイド', image: '/static/deckimages/infernoid.png' },
   { name: '烙印', image: '/static/deckimages/branded.png' },
@@ -71,5 +74,4 @@ export const INITIAL_AVAILABLE_DECKS: Deck[] = [
 
   { name: 'その他1', image: '/static/deckimages/others_01.png' },
   { name: 'その他2', image: '/static/deckimages/others_02.png' },
-  // { name: 'キマイラ', image: '/static/deckimages/spright.png' },
 ];
