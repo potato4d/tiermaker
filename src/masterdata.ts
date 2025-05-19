@@ -4,34 +4,36 @@ export const SAMPLE_DATA = [
   {
     name: 'Tier1',
     decks: [
-      { name: '青眼', image: '/static/deckimages/blue-eyes.png' },
       { name: 'スネークアイ', image: '/static/deckimages/snake-eye.png' },
+      { name: '青眼', image: '/static/deckimages/blue-eyes.png' },
     ],
   },
   {
     name: 'Tier2',
     decks: [
-      { name: '破械', image: '/static/deckimages/unchained.png' },
+      { name: '海皇', image: '/static/deckimages/atlantean.png' },
+      { name: '白き森', image: '/static/deckimages/white-forest.png' },
       { name: 'メメント', image: '/static/deckimages/mementotlan.png' },
     ],
   },
   {
     name: 'Tier3',
     decks: [
-      { name: '白き森', image: '/static/deckimages/white-forest.png' },
-      { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
-      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+      { name: 'P.U.N.K.', image: '/static/deckimages/punk.png' },
+      { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
     ],
   },
   {
     name: 'Tier4',
     decks: [
-      { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
+      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+  { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
+  { name: '破械', image: '/static/deckimages/unchained.png' },
   { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
   { name: 'ユベル', image: '/static/deckimages/yubel.png' },
   { name: '烙印', image: '/static/deckimages/branded.png' },
