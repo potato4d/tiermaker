@@ -4,12 +4,18 @@ export const SAMPLE_DATA = [
   {
     name: 'Tier1',
     decks: [
-      { name: 'スネークアイ', image: '/static/deckimages/snake-eye.png' },
-      { name: '青眼', image: '/static/deckimages/blue-eyes.png' },
+      { name: 'M∀LICE', image: '/static/deckimages/malice.png' },
     ],
   },
   {
     name: 'Tier2',
+    decks: [
+      { name: '青眼', image: '/static/deckimages/blue-eyes.png' },
+      { name: 'クリストロン', image: '/static/deckimages/crystron.png' },
+    ],
+  },
+  {
+    name: 'Tier3',
     decks: [
       { name: '海皇', image: '/static/deckimages/atlantean.png' },
       { name: '白き森', image: '/static/deckimages/white-forest.png' },
@@ -17,21 +23,17 @@ export const SAMPLE_DATA = [
     ],
   },
   {
-    name: 'Tier3',
-    decks: [
-      { name: 'P.U.N.K.', image: '/static/deckimages/punk.png' },
-      { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
-    ],
-  },
-  {
     name: 'Tier4',
     decks: [
-      { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+      { name: '天盃龍', image: '/static/deckimages/tenpai-dragon.png' },
     ],
   },
 ]
 
 export const INITIAL_AVAILABLE_DECKS: Deck[] = [
+      { name: 'スネークアイ', image: '/static/deckimages/snake-eye.png' },
+  { name: 'ラビュリンス', image: '/static/deckimages/labrynth.png' },
+  { name: 'P.U.N.K.', image: '/static/deckimages/punk.png' },
   { name: 'センチュリオン', image: '/static/deckimages/centur-ion.png' },
   { name: '破械', image: '/static/deckimages/unchained.png' },
   { name: '霊獣', image: '/static/deckimages/ritual-beast.png' },
